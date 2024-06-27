@@ -1,0 +1,19 @@
+@import '../../utils/mixins.scss';
+
+.bkg-main {
+    background-image: url('../../../assets/bkg1.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    .head-main{
+        text-align: center;
+        margin-top: 150px;
+        font-family: $fontFamilyPlaywrite;
+        font-size: $fontSizeMainText;
+        font-weight: 450;
+        font-style: normal;
+    }
+}
+

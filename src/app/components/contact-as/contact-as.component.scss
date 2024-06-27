@@ -1,0 +1,43 @@
+.contactAs {
+    margin: 0 auto;
+    margin-top: -25px;
+    width: 80%;
+    height: 600px;
+    .row {
+        background-color: #f0f0f0;
+        margin-bottom: 20px;
+        height: 500px;
+        .col1 {
+            height: 280px;
+            margin: 10px;
+            margin-left: 30px;
+            margin-top: 80px;
+            margin-bottom: 30px;
+            letter-spacing: 0.20em;
+            list-style: none;
+        }
+        .col2 { 
+            margin-top: 10px;
+            padding-top: 10px;
+            height: 440px;
+            border-left: 2px solid #fe884b;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            padding-left: 50px;
+            .map {
+                width: 120%;
+                height: 410px;
+                background-repeat: no-repeat;
+                background-image: url('../../../assets/900x600_google-maps-va-eliminar-tu-historial-ubicaciones-si-no-sigues-estos-pasos-1037998-103405.webp');
+                background-size: cover;
+            }
+        }
+        .list-group-item{
+            background-color: #f0f0f0;
+            border: none
+
+        }
+    }
+}
+

@@ -1,0 +1,11 @@
+
+<div  *ngIf="showSuccessToast"  class="alert alert-success" role="alert">
+    <h4 class="alert-heading">¡Gracias por su consulta!</h4>
+    <p>Su consulta se ha enviado de forma exitosa, le responderemos lo antes posible.</p>
+</div>
+
+
+<div *ngIf="showFailureToast" class="alert alert-danger" role="alert">
+  <h4 class="alert-heading">¡Ups! Algo ha salido mal...</h4>
+  <p>Por favor complete el formulario adecuadamente.</p>
+</div>

@@ -1,0 +1,37 @@
+<div class="footer container">
+    <div class="row">
+        <div class="col-sm-5 col1">
+
+        </div>
+
+        <div class="col-sm-6 col2">
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                
+                <div class="row">                
+                    <label class="col-sm-6" for="firstLastname">Nombre y Apellido:</label>
+                    <input class="col-sm-5" id="firstLastname" formControlName="firstLastname" mixlength="3" maxlength="30">
+                </div>
+                
+                <div class="row">                
+                    <label class="col-sm-6"for="contactNumber">Número de contacto:</label>
+                    <input class="col-sm-5" id="contactNumber" formControlName="contactNumber" type="number">
+                </div>
+                <div class="row">                
+                    <label class="col-sm-6" for="email">Email:</label>
+                    <input class="col-sm-5" id="email" formControlName="email">
+                </div>
+                <div class="row">                
+                    <label class="col-sm-6" for="msg">¿Cuál es su consulta?:</label>
+                    <input class="col-sm-5" id="msg" formControlName="msg" mixlength="5" maxlength="300">
+                </div>
+                <button class="btn btn-primary" type="submit">Enviar consulta</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+

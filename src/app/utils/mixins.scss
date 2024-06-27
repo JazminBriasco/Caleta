@@ -1,0 +1,33 @@
+@mixin hrstyle {
+    background-color: #fe884b;
+    width: 80px;
+    height: 2px;
+    margin-top: 60px;
+    position: absolute;
+  }
+
+  @mixin legendStyle {
+    justify-content: center;
+    font-size: $fontSizeLegend1;    
+  }
+
+  @mixin legendStyleSmall{
+    font-size: $fontSizeLegend2;    
+  }
+
+  @mixin mainCardStyle {
+    background-color: #ffe0d8;
+    width: 90%;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+
+  $fontSizeNav: 20px;
+  $fontSizeMainText: 60px;
+  $fontSizeLegend1: 25px;
+  $fontSizeLegend2: 15px;
+  $fontSizeForm: 20px;
+  $fontSizeContact: 20px;
+
+  $fontFamilyPlaywrite: "Playwrite NZ", cursive;

@@ -1,0 +1,30 @@
+@import '../../utils/mixins.scss';
+
+.individual-card {
+    @include mainCardStyle;
+
+    .card-section-1 {
+        display: flex;
+        width: 25%;
+        height: 400px;
+        position: absolute;
+        justify-content: center; 
+        align-items: center;
+        .p-cards{
+            @include legendStyle;
+        }
+    }
+    hr {
+        @include hrstyle;
+        margin-top: 70px;
+    }
+    .card-section-2 {
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        width: 66%;
+        height: 400px;
+        float: right;
+    }
+    
+}

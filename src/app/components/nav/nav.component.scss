@@ -1,0 +1,15 @@
+@import '../../utils/mixins.scss';
+
+.nav-display {
+    display: ruby-text;
+    margin-top: 10px;
+    .nav-link {
+        letter-spacing: 0.25em;
+        margin:20px;
+        font-size: $fontSizeNav;
+        color: black;
+    }
+    .nav-link:hover {
+        background-color: rgba(240, 240, 240, 0.6);
+    }
+}
