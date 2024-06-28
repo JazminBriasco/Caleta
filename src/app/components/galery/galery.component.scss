@@ -1,6 +1,76 @@
-.gallery {
-    height: 100vh;
+@import '../../utils/mixins.scss';
+
+.nav-gallery{
+    display: block;
+    background-color: #0000001c;
+    position: absolute;
     width: 100%;
-    background-color: aliceblue;
-    position: fixed;
+    margin-top: -26px;
+    height: 85px;
+}
+
+.gallery {
+    width: 100%;
+    background-color: white;
+    height: 1100px;
+    .headers {
+        padding-top: 70px;
+        padding-bottom: 20px;
+        h2{
+            @include legendStyle;
+            letter-spacing: 0.15em;
+            text-align: center; 
+        }
+        hr {
+            @include hrstyle;
+            margin: 0 auto;
+            position: inherit;
+        }
+    }
+    .container {
+        width: 100%;
+        height: 1200px;
+        background-color: white;
+        
+       
+        .row {
+            margin-top: 500px;
+            display: flex;
+            justify-content: center;
+            width: 90%;
+            margin: 0 auto;
+            .img {
+            width: 100%;
+            padding: 10px;
+        }
+    }
+    .img2 {
+        display: flex;
+        height: 67%;
+        background-size: cover;
+        margin: 0 auto;
+        width: 89%;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+    }   
+}
+} 
+
+.g2{
+    background-color: white;
+    margin-top: 30%;
+    .container {
+        background-color: white;
+    }
+}
+
+.g1 {
+    .container {
+        background: linear-gradient(
+            rgb(45 32 32 / 0%), rgb(255 255 255)
+          ),url('../../../assets/playa.jpg');
+    }
+}
+.g4 {
+    margin-top: 32%;
 }

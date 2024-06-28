@@ -13,10 +13,31 @@ export enum LegendCardsEnum {
 }
 
 export enum BackgroundEnum {
-    bkg1 = 'https://content.elmueble.com/medio/2018/08/09/dsc7445-a24090ef_dc4c0250_2000x1414.jpg',
-    bkg2 = 'https://content.elmueble.com/medio/2018/08/12/porche-de-casa-rustica-con-persianas-de-mimbre_d1e26aa9_2000x1335.jpg',
-    bkg3 = 'https://content.elmueble.com/medio/2020/11/25/00377171-bc3f5d23-2000x1518_bf97c330_600x455.jpg',
-    bkg4 = 'https://content.elmueble.com/medio/2019/10/02/00466913_6a03a9a4_2000x1335.jpg'
+    bkg1 = '../../../assets/Cabin3/cabin3-1.jpeg',
+    bkg2 = '../../../assets/Cabin3/cabin3-2.jpeg',
+    bkg3 = '../../../assets/Cabin3/cabin3-3.jpeg',
+    bkg4 = '../../../assets/Cabin3/cabin3-4.jpeg',
+    bkg5 = '../../../assets/Cabin3/cabin3-5.jpeg',
+    
+    bkg6 = '../../../assets/Cabin4/cabin4-2.jpeg',
+    bkg7 = '../../../assets/Cabin4/cabin4-3.jpeg',
+    bkg8 = '../../../assets/Cabin4/cabin4-4.jpeg',
+    bkg9 = '../../../assets/Cabin4/cabin4-5.jpeg',
+    bkg10 = '../../../assets/Cabin4/cabin4-6.jpeg',
+    bkg11 = '../../../assets/Cabin4/cabin4-7.jpeg',
+    bkg12 = '../../../assets/Cabin4/cabin4-8.jpeg',
+    
+    bkg13 = '../../../assets/matu1.jpeg',
+    bkg14 = '../../../assets/matu2.jpeg',
+    bkg15 = '../../../assets/matu3.jpeg',
+    bkg16 = '../../../assets/lechuza.jpeg',
+    bkg17 = '../../../assets/playa.jpg',
+
+    bkg18 = '../../../assets/Cabin2/cabin2-1.jpg',
+    bkg19 = '../../../assets/Cabin2/cabin2-2.jpg',
+    bkg20 = '../../../assets/Cabin2/cabin2-3.jpg',
+
+    
 }
 
 export enum ToastStatus {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BackgroundEnum } from 'src/app/utils/_const.enum';
 
 @Component({
   selector: 'app-principal',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class PrincipalComponent implements OnInit {
+  bkgUrl = BackgroundEnum.bkg17;
 
   constructor() { }
 
+  
   ngOnInit(): void {
   }
 

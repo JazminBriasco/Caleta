@@ -1,7 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ToastStatus } from 'src/app/utils/_const.enum';
+import { BackgroundEnum, ToastStatus } from 'src/app/utils/_const.enum';
 import { CommunicationService } from 'src/app/utils/services';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
 @Component({
   selector: 'app-footer',
@@ -11,7 +12,12 @@ import { CommunicationService } from 'src/app/utils/services';
 export class FooterComponent implements OnInit {
   contactForm :FormGroup;
   isFormValid: boolean = false;
-
+  bkgUrl = BackgroundEnum.bkg15;
+  
+  
+  userId = 'w5g9eITuxDIo-tMgL'; // Reemplaza con tu User ID de EmailJS
+  serviceId = 'service_gd2vos1'; // Reemplaza con tu Service ID de EmailJS
+  templateId = 'template_yclpij9'; // Reemplaza con tu Template ID de EmailJS
 
   constructor(private formBuilder: FormBuilder, private _comService: CommunicationService) { 
     this.contactForm = this.formBuilder.group({
@@ -25,8 +31,20 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void { }
   
   sendEmail(): void{
-    this.contactForm.reset();
-    this.showSuccessToast();
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    if (this.contactForm.valid) {
+      emailjs.sendForm(this.serviceId, this.templateId, form, this.userId)
+        .then((result: EmailJSResponseStatus) => {
+          this.showSuccessToast();
+          this.contactForm.reset();
+        }, (error) => {
+          this.showErrorToast();
+          this.contactForm.reset();
+        });
+    } else {
+      this.showErrorToast();
+    }
+      
   }
   
   showSuccessToast(): void {
@@ -38,8 +56,6 @@ export class FooterComponent implements OnInit {
   }
 
   onSubmit(): void{ 
-
-    
     this.isFormValid = 
       this.contactForm.value.firstLastname?.length > 0 && 
       this.contactForm.value.contactNumber?.toString().length > 6 && this.contactForm.value.contactNumber?.toString().length < 15 &&
