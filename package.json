@@ -1,12 +1,14 @@
 {
   "name": "lo-de-jaz",
   "version": "0.0.0",
+  "homepage": "https://JazminBriasco.github.io/Caleta/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "gh-pages -d dist"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +25,7 @@
     "@types/google.maps": "^3.55.10",
     "@types/googlemaps": "^3.43.3",
     "bootstrap": "^5.3.3",
+    "gh-pages": "^6.1.1",
     "ngx-bootstrap-slider": "^2.1.0",
     "popper.js": "^1.16.1",
     "rxjs": "~7.5.0",

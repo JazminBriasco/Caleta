@@ -6,6 +6,14 @@ import { BackgroundEnum } from 'src/app/utils/_const.enum';
   templateUrl: './galery.component.html',
   styleUrls: ['./galery.component.scss']
 })
+
+
+/**TODO
+ * borde y sombra a las fotos
+ * Spiner al enviar mail
+ * Quitar y ver tema celular (wpp)
+ */
+
 export class GaleryComponent implements OnInit {
   bkg1 = BackgroundEnum.bkg1;
   bkg2 = BackgroundEnum.bkg2;
