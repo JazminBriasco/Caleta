@@ -1,6 +1,7 @@
 
 <div class="gallery-card">
   <app-nav></app-nav>
+
   <div class="presentation-cabin">
     <p class="p-cards-presentation">Nuestras cabañas</p>
     <hr class="hr-presentation" />
@@ -76,7 +77,32 @@
       </div>
     </div>
     <img src="{{ bkg18 }}" alt="Card image cap" class="img-big" />
+  
+<div class="carousel">
+    <div class="carousel-container">
+      <button class="carousel-button" (click)="previousSlide('slide1')">&#10094;</button>
+      <div class="carousel-slide" *ngFor="let slide of slides; let i = index" [class.active]="i === currentSlide">
+        <img [src]="slide.image" alt="{{ slide.title }}">
+       <!--  <div class="carousel-caption">
+         <h3>{{ slide.title }}</h3>
+         <p>{{ slide.description }}</p>
+        </div>-->
+      </div>
+      <button class="carousel-button" (click)="nextSlide()">&#10095;</button>
+    </div>
+    <div class="carousel-container">
+      <button class="carousel-button" (click)="previousSlide('slide2')">&#10094;</button>
+      <div class="carousel-slide" *ngFor="let slide of slides; let i = index" [class.active]="i === currentSlide">
+        <img [src]="slide.image" alt="{{ slide.title }}">
+       <!--  <div class="carousel-caption">
+         <h3>{{ slide.title }}</h3>
+         <p>{{ slide.description }}</p>
+        </div>-->
+      </div>
+      <button class="carousel-button" (click)="nextSlide()">&#10095;</button>
+    </div>
   </div>
+</div>
 
 <!---->
 <div class="g-card">
@@ -205,7 +231,8 @@
   <div class="footer-galery">
     <app-contact-as></app-contact-as>
   </div>
-
+  <div style="height: 20px; background-color: #c5c5c5;" >
+  </div>
 </div>
 
 
