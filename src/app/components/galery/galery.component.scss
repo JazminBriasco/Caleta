@@ -33,6 +33,15 @@
             width: 200px;
             height: 2px;
         }
+        .text-legend{   
+          @include legendStyleSmall;
+          letter-spacing: 0.25rem;
+          line-height: 1.4;
+      }
+      .legend-h{
+        @include legendStyleSmall;
+        margin-top: 0;
+      }
     }
     .p-cards{
         @include legendStyle;

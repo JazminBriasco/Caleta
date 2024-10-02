@@ -6,7 +6,7 @@ import { PrincipalComponent } from './components/principal/principal.component';
 
 const routes: Routes = [
   { path: '', component: PrincipalComponent, pathMatch: 'full' },
-  { path: 'galeria', component: GaleryComponent },
+  { path: 'galeria', component: GaleryComponent, title: 'Lo de Jaz cabañas - Galeria de imagenes en La Caleta' },
   { path: '**', component: PrincipalComponent }
 ];
 
