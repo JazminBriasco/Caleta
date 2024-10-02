@@ -37,7 +37,7 @@ export class FooterComponent implements OnInit {
         .then((result: EmailJSResponseStatus) => {
           this.showSuccessToast();
           this.contactForm.reset();
-        }, (error) => {
+        }, () => {
           this.showErrorToast();
           this.contactForm.reset();
         });
