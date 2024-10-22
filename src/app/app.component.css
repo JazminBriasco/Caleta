@@ -1,0 +1,19 @@
+.go-back {
+    position: fixed;
+    z-index: 10;
+    margin-left: 96%;
+}
+
+img {
+    width: 40px;
+    transform: rotate(-0.25turn); 
+}
+
+.go-back:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+img:hover {
+    width: 50px;
+}

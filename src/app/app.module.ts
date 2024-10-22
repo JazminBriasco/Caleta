@@ -14,6 +14,7 @@ import { ToastComponent } from './components/toast/toast.component';
 import { ContactAsComponent } from './components/contact-as/contact-as.component';
 import { GaleryComponent } from './components/galery/galery.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

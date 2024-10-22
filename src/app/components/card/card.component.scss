@@ -16,12 +16,12 @@
     }
     hr {
         @include hrstyle;
-        margin-top: 70px;
+        margin-top: 110px;
     }
     .card-section-2 {
         background-size: cover;
         background-repeat: no-repeat;
-        
+        background-position: center; 
         width: 66%;
         height: 400px;
         float: right;

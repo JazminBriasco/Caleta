@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,16 +7,40 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 
 export class AppComponent {
-  title = 'lo-de-jaz';
+  isShow: boolean = false;
+  topPosToStartShowing = 100;
 
-  constructor(private router: Router){
-    router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd && event.url === '/galeria' ) {
-      //  document.body.style.backgroundColor = 'white' 
-      }
-      if (event instanceof NavigationEnd && event.url === '/' ) {
-        document.body.style.backgroundColor = 'rgb(197, 197, 197)' 
-      }
+  @HostListener('window:scroll') checkScroll() {
+    const scrollPosition =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
+    var goBack: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName(
+      'go-back'
+    ) as HTMLCollectionOf<HTMLElement>;
+
+    if (goBack.length > 0) {
+      var resta = (25 * screen.height) / 100;
+      goBack[0].style.marginTop = screen.height - resta + 'px';
+    } else {
+      console.log("No se encontraron elementos con la clase 'go-back'");
+    }
+
+    if (scrollPosition >= this.topPosToStartShowing) {
+      this.isShow = true;
+    } else {
+      this.isShow = false;
+    }
+  }
+
+  constructor() {}
+
+  gotoTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
     });
   }
 }

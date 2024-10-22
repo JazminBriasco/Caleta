@@ -1,7 +1,7 @@
 @import '../../utils/mixins.scss';
 
 .bkg-main {
-  //  background-image: url('../../../assets/playa.jpg');
+    background-image: url('../../../assets/Landscapes/landscape-2.jpeg');
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -15,5 +15,25 @@
         font-weight: 450;
         font-style: normal;
     }
+    .p-main{
+        text-align: center;
+        margin-top: 20px;
+        font-family: $fontFamilyPlaywrite;
+        font-size: 30px;
+        font-weight: 450;
+        font-style: normal;
+    }
 }
 
+.rights {
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    background-color: #898989;
+    font-family: $fontSizeMainText;
+    font-weight: bolder;
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+}

@@ -1,26 +1,24 @@
-
 <div class="gallery-card">
   <app-nav></app-nav>
 
   <div class="presentation-cabin">
     <h2 class="p-cards-presentation">Nuestras cabañas</h2>
-    <h3 class="text-legend"><hr class="hr-presentation" />
-    Bienvenidos a nuestras encantadoras cabañas, ideal para unas vacaciones
-    tranquilas y relajantes en plena naturaleza.
-    <br />Nuestras cabañas está equipada con todo lo necesario para que
-    disfrutes de una estancia cómoda y memorable, situadas en un entorno natural
-    tranquilo, rodeada de bosque y playas. <br />Se puede disfrutar de
-    caminatas, ciclismo, pesca, y otras actividades al aire libre. <br />A unos
-    minutos de tiendas, restaurantes y servicios básicos. <br />A solo dos
-    cuadras de las playas. <br />Nuestra cabaña es el lugar perfecto para
-    desconectar y disfrutar de la naturaleza sin renunciar a las comodidades
-    modernas. <br />
+    <h3 class="text-legend">
+      <hr class="hr-presentation" />
+      Bienvenidos a nuestras encantadoras cabañas, ideal para unas vacaciones tranquilas y relajantes en plena
+      naturaleza.
+      <br />Nuestras cabañas está equipada con todo lo necesario para que disfrutes de una estancia cómoda y memorable,
+      situadas en un entorno natural tranquilo, rodeada de bosque y playas.
+      <br />Se puede disfrutar de caminatas, ciclismo, pesca, y otras actividades al aire libre.
+      <br />A unos minutos de tiendas, restaurantes y servicios básicos.
+      <br />A solo dos cuadras de las playas. <br />Nuestra cabaña es el lugar perfecto para desconectar y disfrutar de
+      la naturaleza sin renunciar a las comodidades modernas. <br />
     </h3>
     <span class="float-right">
       <h2 class="legend-h"><strong>¡Esperamos darte la bienvenida pronto!</strong></h2>
-      </span>
+    </span>
   </div>
-  
+
   <div class="g-card">
     <h2><p class="p-cards">Cabaña 2</p></h2>
     <hr />
@@ -28,212 +26,285 @@
       <ul class="list-cabin">
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-          Capacidad: La cabaña puede alojar cómodamente hasta 6 personas.
+            La cabaña puede alojar cómodamente hasta 5 personas
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-          Dormitorios: Cuenta con 1 acogedor dormitorio con una cama queen-size
-          y una cama individual.
+            Cuenta con un acogedor dormitorio con un somnier de 2 plazas, un somnier de 1 plaza y media y smart TV
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-          Cocina: La cocina está totalmente equipada con electrodomésticos
-          modernos, incluyendo una nevera, estufa, horno y microondas. También
+            Cuenta con una cocina a gas, totalmente equipada con electrodomésticos
+          modernos, incluyendo heladera con freezer, microondas, pava eléctrica y tostadora. También
           encontrarás utensilios de cocina, vajilla y cubiertos.
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-          Sala de Estar: Una espaciosa sala de estar con un cómodo sofá, parrila
-          interna y un televisor con Direct TV incluido.
+            Living comedor con una mesa para 4 personas y TV, a demás de un cómodo diván cama (2 camas de una plaza).
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-          Comedor: Un comedor amplio con una mesa para 4 personas.
+            Conexión Wi-Fi en toda la cabaña.
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-          Internet: Conexión Wi-Fi en toda la cabaña.
+            Parrilla al aire libre y en el interior para disfrutar de deliciosas comidas.
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-          Parrilla: Parrilla al aire libre para disfrutar de deliciosas comidas
-          al aire libre.
-        </li>
-        <li>
-          <img src="../../../assets/fav-icon.png" height="15" />
-          Jardín: Un hermoso jardín con áreas verdes para descansar y disfrutar
+            Un hermoso jardín con áreas verdes para descansar y disfrutar
           de la naturaleza.
         </li>
       </ul>
     </div>
     <div class="row">
       <div class="col-sm">
-        <img src="{{ bkg18 }}" alt="Card image cap" class="img-row" />
+        <img src="../../../assets/Cabin2/photo_2024-10-21_15-01-44.jpg" alt="Card image cap" class="img-row" />
       </div>
       <div class="col-sm">
-        <img src="{{ bkg19 }}" alt="Card image cap" class="img-row" />
+        <img src="{{ cabin202 }}" alt="Card image cap" class="img-row" />
       </div>
       <div class="col-sm">
-        <img src="{{ bkg20 }}" alt="Card image cap" class="img-row" />
+        <img src="{{ cabin203 }}" alt="Card image cap" class="img-row" />
       </div>
     </div>
-    <img src="{{ bkg18 }}" alt="Card image cap" class="img-big" />
-  
-<div class="carousel">
-    <div class="carousel-container">
-      <button class="carousel-button" (click)="previousSlide('slide1')">&#10094;</button>
-      <div class="carousel-slide" *ngFor="let slide of slides; let i = index" [class.active]="i === currentSlide">
-        <img [src]="slide.image" alt="{{ slide.title }}">
-       <!--  <div class="carousel-caption">
-         <h3>{{ slide.title }}</h3>
-         <p>{{ slide.description }}</p>
-        </div>-->
+
+    <div class="img-list">
+      <mat-grid-list cols="4" rowHeight="200px" gutterSize="10px">
+        <mat-grid-tile [colspan]="2" [rowspan]="2">
+          <div class="carousel">
+            <div class="carousel-container">
+              <button class="carousel-button" (click)="previousSlide('slide1')">&#10094;</button>
+              <div class="carousel-slide" *ngFor="let slide of slides; let i = index"
+                [class.active]="i === currentSlide">
+                <img [src]="slide.image" alt="{{ slide.title }}" class="gallery-img">
+              </div>
+              <button class="carousel-button" (click)="nextSlide()">&#10095;</button>
+            </div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin202}} alt="Image 2" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin203}} alt="Image 3" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin205}} alt="Image 4" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin204}} alt="Image 5" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin206}} alt="Image 6" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin208}} alt="Image 7" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin208}} alt="Image 8" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin211}} alt="Image 8" class="gallery-img" />
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+
+
+
+  <!---->
+  <div class="g-card">
+    <h2>
+      <p class="p-cards">Cabaña 3</p>
+    </h2>
+    <hr />
+    <div>
+      <ul class="list-cabin">
+        <li>
+          <img src="../../../assets/fav-icon.png" height="15" />
+            La cabaña puede alojar cómodamente hasta 2 personas.
+        </li>
+        <li>
+          <img src="../../../assets/fav-icon.png" height="15" />
+            Cuenta con un acogedor dormitorio con un somnier de 2 plazas y smart TV
+        </li>
+        <li>
+          <img src="../../../assets/fav-icon.png" height="15" />
+            Cuenta con cocina eléctrica, totalmente equipada con electrodomésticos
+          modernos, incluyendo heladera con freezer, microondas, pava eléctrica y tostadora. También
+          encontrarás utensilios de cocina, vajilla y cubiertos.
+        </li>
+        <li>
+          <img src="../../../assets/fav-icon.png" height="15" />
+            Living comedor con una mesa para 4 personas y TV.
+        </li>
+        <li>
+          <img src="../../../assets/fav-icon.png" height="15" />
+            Conexión Wi-Fi en toda la cabaña.
+        </li>
+        <li>
+          <img src="../../../assets/fav-icon.png" height="15" />
+            Parrilla al aire libre y en el interior para disfrutar de deliciosas comidas.
+        </li>
+        <li>
+          <img src="../../../assets/fav-icon.png" height="15" />
+            Un hermoso jardín con áreas verdes para descansar y disfrutar
+          de la naturaleza.
+        </li>
+      </ul>
+    </div>
+    <div class="img-list">
+      <mat-grid-list cols="4" rowHeight="200px" gutterSize="10px">
+        <mat-grid-tile [colspan]="2" [rowspan]="2">
+          <div class="carousel">
+            <div class="carousel-container">
+              <button class="carousel-button" (click)="previousSlide('slide1')">&#10094;</button>
+              <div class="carousel-slide" *ngFor="let slide of slides; let i = index"
+                [class.active]="i === currentSlide">
+                <img [src]="slide.image" alt="{{ slide.title }}" class="gallery-img">
+              </div>
+              <button class="carousel-button" (click)="nextSlide()">&#10095;</button>
+            </div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin202}} alt="Image 2" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin203}} alt="Image 3" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin205}} alt="Image 4" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin204}} alt="Image 5" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin206}} alt="Image 6" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin208}} alt="Image 7" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin208}} alt="Image 8" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin211}} alt="Image 8" class="gallery-img" />
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <img src="{{ cabin201 }}" alt="Card image cap" class="img-row" />
       </div>
-      <button class="carousel-button" (click)="nextSlide()">&#10095;</button>
-    </div>
-    <div class="carousel-container">
-      <button class="carousel-button" (click)="previousSlide('slide2')">&#10094;</button>
-      <div class="carousel-slide" *ngFor="let slide of slides; let i = index" [class.active]="i === currentSlide">
-        <img [src]="slide.image" alt="{{ slide.title }}">
-       <!--  <div class="carousel-caption">
-         <h3>{{ slide.title }}</h3>
-         <p>{{ slide.description }}</p>
-        </div>-->
+      <div class="col-sm">
+        <img src="{{ cabin201 }}" alt="Card image cap" class="img-row" />
       </div>
-      <button class="carousel-button" (click)="nextSlide()">&#10095;</button>
+      <div class="col-sm">
+        <img src="{{ cabin201 }}" alt="Card image cap" class="img-row" />
+      </div>
     </div>
   </div>
-</div>
 
-<!---->
-<div class="g-card">
-  <h2><p class="p-cards">Cabaña 3</p></h2>
-  <hr />
-  <div>
-    <ul class="list-cabin">
-      <li>
-        <img src="../../../assets/fav-icon.png" height="15" />
-        Capacidad: La cabaña puede alojar cómodamente hasta 2 personas.
-      </li>
-      <li>
-        <img src="../../../assets/fav-icon.png" height="15" />
-        Dormitorios: Cuenta con 1 acogedor dormitorio con una cama queen-size
-        y TV.
-      </li>
-      <li>
-        <img src="../../../assets/fav-icon.png" height="15" />
-        Cocina: La cocina está totalmente equipada con electrodomésticos
-        modernos, incluyendo una nevera, estufa, horno y microondas. También
-        encontrarás utensilios de cocina, vajilla y cubiertos.
-      </li>
-      <li>
-        <img src="../../../assets/fav-icon.png" height="15" />
-        Comedor: Un comedor con una mesa para 4 personas y TV.
-      </li>
-      <li>
-        <img src="../../../assets/fav-icon.png" height="15" />
-        Internet: Conexión Wi-Fi en toda la cabaña.
-      </li>
-      <li>
-        <img src="../../../assets/fav-icon.png" height="15" />
-        Parrilla: Parrilla al aire libre para disfrutar de deliciosas comidas
-        al aire libre.
-      </li>
-      <li>
-        <img src="../../../assets/fav-icon.png" height="15" />
-        Jardín: Un hermoso jardín con áreas verdes para descansar y disfrutar
-        de la naturaleza.
-      </li>
-    </ul>
+  <!---->
+  <div class="g-card">
+    <h2>
+      <p class="p-cards">Cabaña 4</p>
+    </h2>
+    <hr />
+    <div>
+      <ul class="list-cabin">
+        <li>
+          <img src="../../../assets/fav-icon.png" height="15" />
+          La cabaña puede alojar cómodamente hasta 4 personas
+        </li>
+        <li>
+          <img src="../../../assets/fav-icon.png" height="15" />
+          Es una cabaña tipo Loft (sin habitación separada), posee un sillón cama de 2 plazas con colchón de resorte y un diván cama. 
+        </li>
+        <li>
+          <img src="../../../assets/fav-icon.png" height="15" />
+          Cuenta con cocina eléctrica, totalmente equipada con electrodomésticos
+          modernos, incluyendo heladera con freezer, microondas, pava eléctrica y tostadora. También
+          encontrarás utensilios de cocina, vajilla y cubiertos.
+        </li>
+        <li>
+        <li>
+          <img src="../../../assets/fav-icon.png" height="15" />
+           Living comedor amplio con una mesa para 4 personas.
+        </li>
+        <li>
+          <img src="../../../assets/fav-icon.png" height="15" />
+            Conexión Wi-Fi en toda la cabaña.
+        </li>
+        <li>
+          <img src="../../../assets/fav-icon.png" height="15" />
+            Parrilla al aire libre para disfrutar de deliciosas comidas.
+        </li>
+        <li>
+          <img src="../../../assets/fav-icon.png" height="15" />
+            Un hermoso jardín con áreas verdes para descansar y disfrutar de la naturaleza.
+        </li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <div class="col-sm">
+        <img src="{{ cabin201 }}" alt="Card image cap" class="img-row" />
+      </div>
+      <div class="col-sm">
+        <img src="{{ cabin201 }}" alt="Card image cap" class="img-row" />
+      </div>
+      <div class="col-sm">
+        <img src="{{ cabin201 }}" alt="Card image cap" class="img-row" />
+      </div>
+    </div>
+
+     <div class="img-list">
+      <mat-grid-list cols="4" rowHeight="200px" gutterSize="10px">
+        <mat-grid-tile [colspan]="2" [rowspan]="2">
+          <div class="carousel">
+            <div class="carousel-container">
+              <button class="carousel-button" (click)="previousSlide('slide1')">&#10094;</button>
+              <div class="carousel-slide" *ngFor="let slide of slides; let i = index"
+                [class.active]="i === currentSlide">
+                <img [src]="slide.image" alt="{{ slide.title }}" class="gallery-img">
+              </div>
+              <button class="carousel-button" (click)="nextSlide()">&#10095;</button>
+            </div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin202}} alt="Image 2" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin203}} alt="Image 3" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin205}} alt="Image 4" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin204}} alt="Image 5" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin206}} alt="Image 6" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin208}} alt="Image 7" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin208}} alt="Image 8" class="gallery-img" />
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img src={{cabin211}} alt="Image 8" class="gallery-img" />
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+
   </div>
-  <img src="{{ bkg1 }}" alt="Card image cap" class="img-big" />
-
-  <div class="row">
-    <div class="col-sm">
-      <img src="{{ bkg2 }}" alt="Card image cap" class="img-row" />
-    </div>
-    <div class="col-sm">
-      <img src="{{ bkg3 }}" alt="Card image cap" class="img-row" />
-    </div>
-    <div class="col-sm">
-      <img src="{{ bkg4 }}" alt="Card image cap" class="img-row" />
-    </div>
-  </div>
-</div>
-
-<!---->
-<div class="g-card">
-  <h2><p class="p-cards">Cabaña 4</p></h2>
-  <hr />
-  <div>
-    <ul class="list-cabin">
-      <li>
-        <img src="../../../assets/fav-icon.png" height="15" />
-        Capacidad: La cabaña puede alojar cómodamente hasta 4 personas.
-      </li>
-      <li>
-        <img src="../../../assets/fav-icon.png" height="15" />
-        Dormitorios: Cuenta con una cama queen-size, un sofa cama y TV.
-      </li>
-      <li>
-        <img src="../../../assets/fav-icon.png" height="15" />
-        Cocina: La cocina está totalmente equipada con electrodomésticos
-        modernos, incluyendo una nevera, estufa, horno y microondas. También
-        encontrarás utensilios de cocina, vajilla y cubiertos.
-      </li>
-      <li>
-      <li>
-        <img src="../../../assets/fav-icon.png" height="15" />
-        Comedor: Un comedor amplio con una mesa para 4 personas.
-      </li>
-      <li>
-        <img src="../../../assets/fav-icon.png" height="15" />
-        Internet: Conexión Wi-Fi en toda la cabaña.
-      </li>
-      <li>
-        <img src="../../../assets/fav-icon.png" height="15" />
-        Parrilla: Parrilla al aire libre para disfrutar de deliciosas comidas
-        al aire libre.
-      </li>
-      <li>
-        <img src="../../../assets/fav-icon.png" height="15" />
-        Jardín: Un hermoso jardín con áreas verdes para descansar y disfrutar
-        de la naturaleza.
-      </li>
-    </ul>
-  </div>
-
-  <div class="row">
-    <div class="col-sm">
-      <img src="{{ bkg7 }}" alt="Card image cap" class="img-row" />
-    </div>
-    <div class="col-sm">
-      <img src="{{ bkg8 }}" alt="Card image cap" class="img-row" />
-    </div>
-    <div class="col-sm">
-      <img src="{{ bkg9 }}" alt="Card image cap" class="img-row" />
-    </div>
-  </div>
-  <img src="{{ bkg6 }}" alt="Card image cap" class="img-big" />
-
-  <div class="row">
-    <div class="col-sm">
-      <img src="{{ bkg10 }}" alt="Card image cap" class="img-row" />
-    </div>
-    <div class="col-sm">
-      <img src="{{ bkg11 }}" alt="Card image cap" class="img-row" />
-    </div>
-    <div class="col-sm">
-      <img src="{{ bkg12 }}" alt="Card image cap" class="img-row" />
-    </div>
-  </div>
-</div>
-
   <div class="footer-galery">
     <app-contact-as></app-contact-as>
   </div>
-  <div style="height: 20px; background-color: #c5c5c5;" >
+  <div style="height: 20px; background-color: #c5c5c5;">
   </div>
-</div>
-
-

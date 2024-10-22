@@ -8,7 +8,7 @@ import { BackgroundEnum } from 'src/app/utils/_const.enum';
 })
 
 export class PrincipalComponent implements OnInit {
-  bkgUrl = BackgroundEnum.bkg17;
+  bkgUrl = BackgroundEnum.lands2;
 
   constructor() { }
 

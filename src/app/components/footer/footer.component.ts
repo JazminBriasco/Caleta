@@ -12,7 +12,7 @@ import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 export class FooterComponent implements OnInit {
   contactForm :FormGroup;
   isFormValid: boolean = false;
-  bkgUrl = BackgroundEnum.bkg15;
+  bkgUrl = BackgroundEnum.lands10;
   
   
   userId = 'w5g9eITuxDIo-tMgL'; // Reemplaza con tu User ID de EmailJS

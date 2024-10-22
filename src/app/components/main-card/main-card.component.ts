@@ -24,10 +24,11 @@ export class MainCardComponent implements OnInit {
     this.legend2 = LegendCardsEnum.legend2;
     this.legend3 = LegendCardsEnum.legend3;
     this.legend4 = LegendCardsEnum.legend4;
-    this.bkg1 = BackgroundEnum.bkg1;
-    this.bkg2 = BackgroundEnum.bkg2;
-    this.bkg3 = BackgroundEnum.bkg3;
-    this.bkg4 = BackgroundEnum.bkg4;
+
+    this.bkg1 = BackgroundEnum.lands8;
+    this.bkg2 = BackgroundEnum.lands5;
+    this.bkg3 = BackgroundEnum.cabin311;
+    this.bkg4 = BackgroundEnum.lands1;
   }
 
   ngOnInit(): void {
