@@ -16,7 +16,7 @@ import { GaleryComponent } from './components/galery/galery.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { RightsComponent } from './components/rights/rights.component';
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,8 @@ import { RightsComponent } from './components/rights/rights.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatGridListModule
+    MatGridListModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

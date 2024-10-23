@@ -20,14 +20,14 @@ img:hover {
 
 @media only screen and (min-width: 576px) and (max-width: 1100px) {
     .go-back {
-        margin-left: 92%;
+        margin-left: 94%;
     }
  
  }
 
 @media only screen and (max-width: 576px) { 
     .go-back {
-        margin-left: 92%;
+        margin-left: 94%;
     }
     img {
         width: 30px;

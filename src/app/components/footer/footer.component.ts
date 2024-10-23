@@ -13,11 +13,11 @@ export class FooterComponent implements OnInit {
   contactForm :FormGroup;
   isFormValid: boolean = false;
   bkgUrl = BackgroundEnum.lands10;
+  isLoading = false;
   
-  
-  userId = 'w5g9eITuxDIo-tMgL'; // Reemplaza con tu User ID de EmailJS
-  serviceId = 'service_gd2vos1'; // Reemplaza con tu Service ID de EmailJS
-  templateId = 'template_yclpij9'; // Reemplaza con tu Template ID de EmailJS
+  userId = 'w5g9eITuxDIo-tMgL'; 
+  serviceId = 'service_gd2vos1'; 
+  templateId = 'template_yclpij9'; 
 
   constructor(private formBuilder: FormBuilder, private _comService: CommunicationService) { 
     this.contactForm = this.formBuilder.group({
@@ -31,17 +31,21 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void { }
   
   sendEmail(): void{
+    this.isLoading = true;
     const form = document.getElementById('contact-form') as HTMLFormElement;
     if (this.contactForm.valid) {
       emailjs.sendForm(this.serviceId, this.templateId, form, this.userId)
         .then((result: EmailJSResponseStatus) => {
           this.showSuccessToast();
           this.contactForm.reset();
-        }, () => {
+        }).catch (() => {
           this.showErrorToast();
           this.contactForm.reset();
+        }).finally(() => {
+          this.isLoading = false;
         });
     } else {
+      this.isLoading = false;
       this.showErrorToast();
     }
       
@@ -61,8 +65,6 @@ export class FooterComponent implements OnInit {
       this.contactForm.value.contactNumber?.toString().length > 6 && this.contactForm.value.contactNumber?.toString().length < 15 &&
       this.contactForm.value.email?.length > 5 && this.contactForm.value.email?.includes('@') &&
       this.contactForm.value.msg?.length > 0;
-  
       this.isFormValid ? this.sendEmail() : this.showErrorToast();
-    
   }
 }

@@ -45,8 +45,21 @@
     }
 }
 
-@media only screen and (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1100px) {
     .contactAs {
+        .row {
+            .col2 { 
+                border-left: none;
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .contactAs {
+        margin-top: 30px;
         .row {
             .col1 {
                 margin-top: 25px;
@@ -70,6 +83,7 @@
 
   @media only screen and (max-width: 576px) {
     .contactAs {
+        margin-top: 30px;
         .row {
             .col1 {
                 margin-left: 0px;

@@ -185,3 +185,10 @@
 }
 
 
+@media only screen and (max-width: 576px) {
+  .presentation-cabin {
+    display: grid;
+    text-align: center;
+  }
+
+}

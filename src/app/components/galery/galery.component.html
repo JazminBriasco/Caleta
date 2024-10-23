@@ -5,17 +5,21 @@
     <h2 class="p-cards-presentation">Nuestras cabañas</h2>
     <h3 class="text-legend">
       <hr class="hr-presentation" />
-      Bienvenidos a nuestras encantadoras cabañas, ideal para unas vacaciones tranquilas y relajantes en plena
-      naturaleza.
-      <br />Nuestras cabañas está equipada con todo lo necesario para que disfrutes de una estancia cómoda y memorable,
-      situadas en un entorno natural tranquilo, rodeada de bosque y playas.
-      <br />Se puede disfrutar de caminatas, ciclismo, pesca, y otras actividades al aire libre.
-      <br />A unos minutos de tiendas, restaurantes y servicios básicos.
-      <br />A solo dos cuadras de las playas. <br />Nuestra cabaña es el lugar perfecto para desconectar y disfrutar de
-      la naturaleza sin renunciar a las comodidades modernas. <br />
+      Bienvenidos a nuestras encantadoras cabañas, ideal para unas vacaciones
+      tranquilas y relajantes en plena naturaleza.
+      <br />Nuestras cabañas está equipada con todo lo necesario para que
+      disfrutes de una estancia cómoda y memorable, situadas en un entorno
+      natural tranquilo, rodeada de bosque y playas. <br />Se puede disfrutar de
+      caminatas, ciclismo, pesca, y otras actividades al aire libre. <br />A
+      unos minutos de tiendas, restaurantes y servicios básicos. <br />A solo
+      dos cuadras de las playas. <br />Nuestra cabaña es el lugar perfecto para
+      desconectar y disfrutar de la naturaleza sin renunciar a las comodidades
+      modernas. <br />
     </h3>
     <span class="float-right">
-      <h2 class="legend-h"><strong>¡Esperamos darte la bienvenida pronto!</strong></h2>
+      <h2 class="legend-h">
+        <strong>¡Esperamos darte la bienvenida pronto!</strong>
+      </h2>
     </span>
   </div>
 
@@ -26,94 +30,141 @@
       <ul class="list-cabin">
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-            La cabaña puede alojar cómodamente hasta 5 personas
+          La cabaña puede alojar cómodamente hasta 5 personas
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-            Cuenta con un acogedor dormitorio con un somnier de 2 plazas, un somnier de 1 plaza y media y smart TV
+          Cuenta con un acogedor dormitorio con un somnier de 2 plazas, un
+          somnier de 1 plaza y media y smart TV
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-            Cuenta con una cocina a gas, totalmente equipada con electrodomésticos
-          modernos, incluyendo heladera con freezer, microondas, pava eléctrica y tostadora. También
-          encontrarás utensilios de cocina, vajilla y cubiertos.
+          Cuenta con una cocina a gas, totalmente equipada con electrodomésticos
+          modernos, incluyendo heladera con freezer, microondas, pava eléctrica
+          y tostadora. También encontrarás utensilios de cocina, vajilla y
+          cubiertos.
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-            Living comedor con una mesa para 4 personas y TV, a demás de un cómodo diván cama (2 camas de una plaza).
+          Living comedor con una mesa para 4 personas y TV, a demás de un cómodo
+          diván cama (2 camas de una plaza).
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-            Conexión Wi-Fi en toda la cabaña.
+          Conexión Wi-Fi en toda la cabaña.
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-            Parrilla al aire libre y en el interior para disfrutar de deliciosas comidas.
+          Parrilla al aire libre y en el interior para disfrutar de deliciosas
+          comidas.
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-            Un hermoso jardín con áreas verdes para descansar y disfrutar
-          de la naturaleza.
+          Un hermoso jardín con áreas verdes para descansar y disfrutar de la
+          naturaleza.
         </li>
       </ul>
     </div>
-    <div class="row">
-      <div class="col-sm">
-        <img src="../../../assets/Cabin2/photo_2024-10-21_15-01-44.jpg" alt="Card image cap" class="img-row" />
+
+    <div *ngIf="!useResponsiveCard; else responsiveReverseCard1">
+
+      <div class="row">
+        <div class="col-sm">
+          <img src="../../../assets/Cabin2/cabin2-04.jpeg" alt="Card image cap"  class="img-row" />
+        </div>
+        <div class="col-sm">
+          <img src="../../../assets/Cabin2/cabin2-06.jpeg" alt="Card image cap" class="img-row" />
+        </div>
+        <div class="col-sm">
+          <img src="../../../assets/Cabin2/cabin2-08.jpeg" alt="Card image cap" class="img-row" />
+        </div>
       </div>
-      <div class="col-sm">
-        <img src="{{ cabin202 }}" alt="Card image cap" class="img-row" />
-      </div>
-      <div class="col-sm">
-        <img src="{{ cabin203 }}" alt="Card image cap" class="img-row" />
+
+      <div class="img-list">
+        <mat-grid-list cols="4" rowHeight="200px" gutterSize="10px">
+          <mat-grid-tile [colspan]="2" [rowspan]="2">
+            <div class="carousel">
+              <div class="carousel-container">
+                <button class="carousel-button" (click)="previousSlide('slide1')">
+                  &#10094;
+                </button>
+                <div
+                  class="carousel-slide"
+                  *ngFor="let slide of slidesCabin2; let i = index"
+                  [class.active]="i === currentSlide"
+                >
+                  <img
+                    [src]="slide.image"
+                    alt="{{ slide.title }}"
+                    class="gallery-img"
+                  />
+                </div>
+                <button class="carousel-button" (click)="nextSlide('slide1')">
+                  &#10095;
+                </button>
+              </div>
+            </div>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <img src="../../../assets/Cabin2/cabin2-06.jpeg"  alt="Image 2" class="gallery-img" />
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <img src="../../../assets/Landscapes/landscape-10.jpg" alt="Image 3" class="gallery-img" />
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <img src="../../../assets/Cabin2/cabin2-10.jpeg" alt="Image 4" class="gallery-img" />
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <img src="../../../assets/Cabin2/cabin2-11.jpeg" alt="Image 5" class="gallery-img" />
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <img src="../../../assets/Cabin2/cabin2-12.jpeg" alt="Image 6" class="gallery-img" />
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <img src="../../../assets/Cabin2/cabin2-13.jpeg" alt="Image 7" class="gallery-img" />
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <img src="../../../assets/Cabin2/cabin2-14.jpeg" alt="Image 8" class="gallery-img" />
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <img src="../../../assets/Cabin2/cabin2-15.jpeg" alt="Image 8" class="gallery-img" />
+          </mat-grid-tile>
+        </mat-grid-list>
       </div>
     </div>
 
-    <div class="img-list">
-      <mat-grid-list cols="4" rowHeight="200px" gutterSize="10px">
-        <mat-grid-tile [colspan]="2" [rowspan]="2">
-          <div class="carousel">
-            <div class="carousel-container">
-              <button class="carousel-button" (click)="previousSlide('slide1')">&#10094;</button>
-              <div class="carousel-slide" *ngFor="let slide of slides; let i = index"
-                [class.active]="i === currentSlide">
-                <img [src]="slide.image" alt="{{ slide.title }}" class="gallery-img">
+    <ng-template #responsiveReverseCard1>
+        <div class="img-list">
+          <mat-grid-list cols="4" rowHeight="200px" gutterSize="10px">
+            <mat-grid-tile [colspan]="4" [rowspan]="2">
+              <div class="carousel">
+                <div class="carousel-container">
+                  <button class="carousel-button" (click)="previousSlide('slide1Resp')">
+                    &#10094;
+                  </button>
+                  <div
+                    class="carousel-slide"
+                    *ngFor="let slide of slidesCabin2Responsive; let i = index"
+                    [class.active]="i === currentSlide"
+                  >
+                    <img
+                      [src]="slide.image"
+                      alt="{{ slide.title }}"
+                      class="gallery-img"
+                    />
+                  </div>
+                  <button class="carousel-button" (click)="nextSlide('slide1Resp')">
+                    &#10095;
+                  </button>
+                </div>
               </div>
-              <button class="carousel-button" (click)="nextSlide()">&#10095;</button>
-            </div>
-          </div>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <img src={{cabin202}} alt="Image 2" class="gallery-img" />
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <img src={{cabin203}} alt="Image 3" class="gallery-img" />
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <img src={{cabin205}} alt="Image 4" class="gallery-img" />
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <img src={{cabin204}} alt="Image 5" class="gallery-img" />
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <img src={{cabin206}} alt="Image 6" class="gallery-img" />
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <img src={{cabin208}} alt="Image 7" class="gallery-img" />
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <img src={{cabin208}} alt="Image 8" class="gallery-img" />
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <img src={{cabin211}} alt="Image 8" class="gallery-img" />
-        </mat-grid-tile>
-      </mat-grid-list>
-    </div>
+            </mat-grid-tile>
+          
+          </mat-grid-list>
+        </div>
+    </ng-template>
   </div>
 
-
-
-  <!---->
   <div class="g-card">
     <h2>
       <p class="p-cards">Cabaña 3</p>
@@ -123,91 +174,140 @@
       <ul class="list-cabin">
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-            La cabaña puede alojar cómodamente hasta 2 personas.
+          La cabaña puede alojar cómodamente hasta 2 personas.
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-            Cuenta con un acogedor dormitorio con un somnier de 2 plazas y smart TV
+          Cuenta con un acogedor dormitorio con un somnier de 2 plazas y smart
+          TV
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-            Cuenta con cocina eléctrica, totalmente equipada con electrodomésticos
-          modernos, incluyendo heladera con freezer, microondas, pava eléctrica y tostadora. También
-          encontrarás utensilios de cocina, vajilla y cubiertos.
+          Cuenta con cocina eléctrica, totalmente equipada con electrodomésticos
+          modernos, incluyendo heladera con freezer, microondas, pava eléctrica
+          y tostadora. También encontrarás utensilios de cocina, vajilla y
+          cubiertos.
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-            Living comedor con una mesa para 4 personas y TV.
+          Living comedor con una mesa para 4 personas y TV.
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-            Conexión Wi-Fi en toda la cabaña.
+          Conexión Wi-Fi en toda la cabaña.
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-            Parrilla al aire libre y en el interior para disfrutar de deliciosas comidas.
+          Parrilla al aire libre y en el interior para disfrutar de deliciosas
+          comidas.
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-            Un hermoso jardín con áreas verdes para descansar y disfrutar
-          de la naturaleza.
+          Un hermoso jardín con áreas verdes para descansar y disfrutar de la
+          naturaleza.
         </li>
       </ul>
     </div>
+
+    <div *ngIf="!useResponsiveCard; else responsiveReverseCard2">
     <div class="img-list">
       <mat-grid-list cols="4" rowHeight="200px" gutterSize="10px">
         <mat-grid-tile [colspan]="2" [rowspan]="2">
           <div class="carousel">
             <div class="carousel-container">
-              <button class="carousel-button" (click)="previousSlide('slide1')">&#10094;</button>
-              <div class="carousel-slide" *ngFor="let slide of slides; let i = index"
-                [class.active]="i === currentSlide">
-                <img [src]="slide.image" alt="{{ slide.title }}" class="gallery-img">
+              <button class="carousel-button" (click)="previousSlide('slide2')">
+                &#10094;
+              </button>
+              <div
+                class="carousel-slide"
+                *ngFor="let slide of slidesCabin3; let i = index"
+                [class.active]="i === currentSlide"
+              >
+                <img
+                  [src]="slide.image"
+                  alt="{{ slide.title }}"
+                  class="gallery-img"
+                />
               </div>
-              <button class="carousel-button" (click)="nextSlide()">&#10095;</button>
+              <button class="carousel-button" (click)="nextSlide('slide2')">
+                &#10095;
+              </button>
             </div>
           </div>
         </mat-grid-tile>
         <mat-grid-tile>
-          <img src={{cabin202}} alt="Image 2" class="gallery-img" />
+          <img src="../../../assets/Cabin3/cabin3-04.jpeg" alt="Image 2" class="gallery-img" />
         </mat-grid-tile>
         <mat-grid-tile>
-          <img src={{cabin203}} alt="Image 3" class="gallery-img" />
+          <img src="../../../assets/Cabin3/cabin3-05.jpeg" alt="Image 3" class="gallery-img" />
         </mat-grid-tile>
         <mat-grid-tile>
-          <img src={{cabin205}} alt="Image 4" class="gallery-img" />
+          <img src="../../../assets/Cabin3/cabin3-06.jpeg" alt="Image 4" class="gallery-img" />
         </mat-grid-tile>
         <mat-grid-tile>
-          <img src={{cabin204}} alt="Image 5" class="gallery-img" />
+          <img src="../../../assets/Cabin3/cabin3-07.jpeg" alt="Image 5" class="gallery-img" />
         </mat-grid-tile>
         <mat-grid-tile>
-          <img src={{cabin206}} alt="Image 6" class="gallery-img" />
+          <img src="../../../assets/Cabin3/cabin3-08.jpeg" alt="Image 6" class="gallery-img" />
         </mat-grid-tile>
         <mat-grid-tile>
-          <img src={{cabin208}} alt="Image 7" class="gallery-img" />
+          <img src="../../../assets/Cabin3/cabin3-09.jpeg" alt="Image 7" class="gallery-img" />
         </mat-grid-tile>
         <mat-grid-tile>
-          <img src={{cabin208}} alt="Image 8" class="gallery-img" />
+          <img src="../../../assets/Cabin3/cabin3-10.jpeg" alt="Image 8" class="gallery-img" />
         </mat-grid-tile>
         <mat-grid-tile>
-          <img src={{cabin211}} alt="Image 8" class="gallery-img" />
+          <img src="../../../assets/Cabin3/cabin3-11.jpeg" alt="Image 8" class="gallery-img" />
         </mat-grid-tile>
       </mat-grid-list>
     </div>
     <div class="row">
       <div class="col-sm">
-        <img src="{{ cabin201 }}" alt="Card image cap" class="img-row" />
+        <img src="../../../assets/Landscapes/landscape-2.jpeg" alt="Card image cap" class="img-row" />
       </div>
       <div class="col-sm">
-        <img src="{{ cabin201 }}" alt="Card image cap" class="img-row" />
+        <img src="../../../assets/Landscapes/landscape-5.jpg" alt="Card image cap" class="img-row" />
       </div>
       <div class="col-sm">
-        <img src="{{ cabin201 }}" alt="Card image cap" class="img-row" />
+        <img src="../../../assets/Landscapes/landscape-6.jpeg" alt="Card image cap" class="img-row" />
       </div>
     </div>
   </div>
 
-  <!---->
+  <ng-template #responsiveReverseCard2>
+    <div class="img-list">
+      <mat-grid-list cols="4" rowHeight="200px" gutterSize="10px">
+        <mat-grid-tile [colspan]="4" [rowspan]="2">
+          <div class="carousel">
+            <div class="carousel-container">
+              <button class="carousel-button" (click)="previousSlide('slide2Resp')">
+                &#10094;
+              </button>
+              <div
+                class="carousel-slide"
+                *ngFor="let slide of slidesCabin3Responsive; let i = index"
+                [class.active]="i === currentSlide"
+              >
+                <img
+                  [src]="slide.image"
+                  alt="{{ slide.title }}"
+                  class="gallery-img"
+                />
+              </div>
+              <button class="carousel-button" (click)="nextSlide('slide2Resp')">
+                &#10095;
+              </button>
+            </div>
+          </div>
+        </mat-grid-tile>
+      
+      </mat-grid-list>
+    </div>
+</ng-template>
+
+</div>
+
+
   <div class="g-card">
     <h2>
       <p class="p-cards">Cabaña 4</p>
@@ -221,91 +321,136 @@
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-          Es una cabaña tipo Loft (sin habitación separada), posee un sillón cama de 2 plazas con colchón de resorte y un diván cama. 
+          Es una cabaña tipo Loft (sin habitación separada), posee un sillón
+          cama de 2 plazas con colchón de resorte y un diván cama.
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
           Cuenta con cocina eléctrica, totalmente equipada con electrodomésticos
-          modernos, incluyendo heladera con freezer, microondas, pava eléctrica y tostadora. También
-          encontrarás utensilios de cocina, vajilla y cubiertos.
+          modernos, incluyendo heladera con freezer, microondas, pava eléctrica
+          y tostadora. También encontrarás utensilios de cocina, vajilla y
+          cubiertos.
         </li>
-        <li>
+        <li></li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-           Living comedor amplio con una mesa para 4 personas.
-        </li>
-        <li>
-          <img src="../../../assets/fav-icon.png" height="15" />
-            Conexión Wi-Fi en toda la cabaña.
+          Living comedor amplio con una mesa para 4 personas.
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-            Parrilla al aire libre para disfrutar de deliciosas comidas.
+          Conexión Wi-Fi en toda la cabaña.
         </li>
         <li>
           <img src="../../../assets/fav-icon.png" height="15" />
-            Un hermoso jardín con áreas verdes para descansar y disfrutar de la naturaleza.
+          Parrilla al aire libre para disfrutar de deliciosas comidas.
+        </li>
+        <li>
+          <img src="../../../assets/fav-icon.png" height="15" />
+          Un hermoso jardín con áreas verdes para descansar y disfrutar de la
+          naturaleza.
         </li>
       </ul>
     </div>
 
+    <div *ngIf="!useResponsiveCard; else responsiveReverseCard3">
     <div class="row">
       <div class="col-sm">
-        <img src="{{ cabin201 }}" alt="Card image cap" class="img-row" />
+        <img src="../../../assets/Cabin4/cabin4-01.jpeg" alt="Card image cap" class="img-row" />
       </div>
       <div class="col-sm">
-        <img src="{{ cabin201 }}" alt="Card image cap" class="img-row" />
+        <img src="../../../assets/Cabin4/cabin4-02.jpeg" alt="Card image cap" class="img-row" />
       </div>
       <div class="col-sm">
-        <img src="{{ cabin201 }}" alt="Card image cap" class="img-row" />
+        <img src="../../../assets/Cabin4/cabin4-03.jpeg" alt="Card image cap" class="img-row" />
       </div>
     </div>
 
-     <div class="img-list">
+    <div class="img-list">
       <mat-grid-list cols="4" rowHeight="200px" gutterSize="10px">
         <mat-grid-tile [colspan]="2" [rowspan]="2">
           <div class="carousel">
             <div class="carousel-container">
-              <button class="carousel-button" (click)="previousSlide('slide1')">&#10094;</button>
-              <div class="carousel-slide" *ngFor="let slide of slides; let i = index"
-                [class.active]="i === currentSlide">
-                <img [src]="slide.image" alt="{{ slide.title }}" class="gallery-img">
+              <button class="carousel-button" (click)="previousSlide('slide3')">
+                &#10094;
+              </button>
+              <div
+                class="carousel-slide"
+                *ngFor="let slide of slidesCabin4; let i = index"
+                [class.active]="i === currentSlide"
+              >
+                <img
+                  [src]="slide.image"
+                  alt="{{ slide.title }}"
+                  class="gallery-img"
+                />
               </div>
-              <button class="carousel-button" (click)="nextSlide()">&#10095;</button>
+              <button class="carousel-button" (click)="nextSlide('slide3')">
+                &#10095;
+              </button>
             </div>
           </div>
         </mat-grid-tile>
         <mat-grid-tile>
-          <img src={{cabin202}} alt="Image 2" class="gallery-img" />
+          <img src="../../../assets/Cabin4/cabin4-04.jpeg" alt="Image 2" class="gallery-img" />
         </mat-grid-tile>
         <mat-grid-tile>
-          <img src={{cabin203}} alt="Image 3" class="gallery-img" />
+          <img src="../../../assets/Cabin4/cabin4-05.jpeg" alt="Image 3" class="gallery-img" />
         </mat-grid-tile>
         <mat-grid-tile>
-          <img src={{cabin205}} alt="Image 4" class="gallery-img" />
+          <img src="../../../assets/Cabin4/cabin4-06.jpeg" alt="Image 4" class="gallery-img" />
         </mat-grid-tile>
         <mat-grid-tile>
-          <img src={{cabin204}} alt="Image 5" class="gallery-img" />
+          <img src="../../../assets/Cabin4/cabin4-07.jpeg" alt="Image 5" class="gallery-img" />
         </mat-grid-tile>
         <mat-grid-tile>
-          <img src={{cabin206}} alt="Image 6" class="gallery-img" />
+          <img src="../../../assets/Cabin4/cabin4-08.jpeg" alt="Image 6" class="gallery-img" />
         </mat-grid-tile>
         <mat-grid-tile>
-          <img src={{cabin208}} alt="Image 7" class="gallery-img" />
+          <img src="../../../assets/Cabin4/cabin4-09.jpeg" alt="Image 7" class="gallery-img" />
         </mat-grid-tile>
         <mat-grid-tile>
-          <img src={{cabin208}} alt="Image 8" class="gallery-img" />
+          <img src="../../../assets/Cabin4/cabin4-10.jpeg" alt="Image 8" class="gallery-img" />
         </mat-grid-tile>
         <mat-grid-tile>
-          <img src={{cabin211}} alt="Image 8" class="gallery-img" />
+          <img src="../../../assets/Cabin4/cabin4-11.jpeg" alt="Image 8" class="gallery-img" />
         </mat-grid-tile>
       </mat-grid-list>
     </div>
-
+  </div>
+  <ng-template #responsiveReverseCard3>
+    <div class="img-list">
+      <mat-grid-list cols="4" rowHeight="200px" gutterSize="10px">
+        <mat-grid-tile [colspan]="4" [rowspan]="2">
+          <div class="carousel">
+            <div class="carousel-container">
+              <button class="carousel-button" (click)="previousSlide('slide3Resp')">
+                &#10094;
+              </button>
+              <div
+                class="carousel-slide"
+                *ngFor="let slide of slidesCabin4Responsive; let i = index"
+                [class.active]="i === currentSlide"
+              >
+                <img
+                  [src]="slide.image"
+                  alt="{{ slide.title }}"
+                  class="gallery-img"
+                />
+              </div>
+              <button class="carousel-button" (click)="nextSlide('slide3Resp')">
+                &#10095;
+              </button>
+            </div>
+          </div>
+        </mat-grid-tile>
+      
+      </mat-grid-list>
+    </div>
+</ng-template>
   </div>
   <div class="footer-galery">
     <app-contact-as></app-contact-as>
   </div>
-  <div style="height: 20px; background-color: #c5c5c5;">
-  </div>
-<app-rights></app-rights>
+  <div style="height: 20px; background-color: #c5c5c5"></div>
+  <app-rights></app-rights>
+</div>

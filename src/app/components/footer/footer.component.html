@@ -1,37 +1,33 @@
 <section id="contacto">
-<div class="footer container">
-    <div class="row">
-        <div class="col-sm-5 col1 responsive" style="background-image: url({{bkgUrl}})"></div>
-        <div class="col-sm-6 col2">
-            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" id="contact-form">
-                
-                <div class="row">  
-                              
-                    <label class="col-sm-6" for="firstLastname" >Nombre y Apellido:</label>
-                    <input class="col-sm-5" placeholder="..." id="firstLastname" autocomplete="off" formControlName="firstLastname" name="firstLastname" mixlength="3" maxlength="30">
-                </div>
-                
-                <div class="row">                
-                    <label class="col-sm-6"for="contactNumber">Número de contacto:</label>
-                    <input class="col-sm-5" placeholder="..." id="contactNumber" autocomplete="off" spellcheck="false" formControlName="contactNumber" name="contactNumber" type="number">
-                </div>
-                <div class="row">                
-                    <label class="col-sm-6" for="email">Email:</label>
-                    <input class="col-sm-5" placeholder="..."  id="email" autocomplete="off" formControlName="email"  name="email">
-                </div>
-                <div class="row">                
-                    <label class="col-sm-6" for="msg">¿Cuál es su consulta?:</label>
-                    <textarea class="col-sm-5 msgInput" placeholder="..."  id="msg" autocomplete="off" formControlName="msg" name="msg"> </textarea>
-                </div>
-                <button class="btn btn-primary" type="submit">Enviar consulta</button>
-            </form>
+    <div class="footer container">
+        <div class="row">
+            <div class="col-sm-5 col1 responsive" style="background-image: url({{bkgUrl}})"></div>
+            <div class="col-sm-6 col2">
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" id="contact-form">
+                    <div class="row">  
+                        <label class="col-sm-6" for="firstLastname" >Nombre y Apellido:</label>
+                        <input class="col-sm-5" placeholder="..." id="firstLastname" autocomplete="off" formControlName="firstLastname" name="firstLastname" mixlength="3" maxlength="30">
+                    </div>
+                    <div class="row">                
+                        <label class="col-sm-6"for="contactNumber">Número de contacto:</label>
+                        <input class="col-sm-5" placeholder="..." id="contactNumber" autocomplete="off" spellcheck="false" formControlName="contactNumber" name="contactNumber" type="number">
+                    </div>
+                    <div class="row">                
+                        <label class="col-sm-6" for="email">Email:</label>
+                        <input class="col-sm-5" placeholder="..."  id="email" autocomplete="off" formControlName="email"  name="email">
+                    </div>
+                    <div class="row">                
+                        <label class="col-sm-6" for="msg">¿Cuál es su consulta?:</label>
+                        <textarea class="col-sm-5 msgInput" placeholder="..."  id="msg" autocomplete="off" formControlName="msg" name="msg"> </textarea>
+                    </div>
 
+                    <div *ngIf="isLoading" class="spinner"> 
+                        <img src=".././../../assets/Pulse@1x-1.0s-200px-200px.svg" alt="Animación SVG de spinner">
+                    </div>
+                    <button *ngIf="!isLoading" class="btn btn-primary" type="submit">Enviar consulta</button>
+
+                </form>
+            </div>
         </div>
     </div>
-</div>
-
-
-
-
-
 </section>

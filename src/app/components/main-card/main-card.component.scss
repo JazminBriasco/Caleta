@@ -11,6 +11,11 @@
     letter-spacing: 0.25em;
     display: table;
     padding-bottom: 50px;
+    width: 80%;
+    h2 {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
     hr {
         @include hrstyle;
         position: relative;
@@ -22,7 +27,8 @@
         letter-spacing: 0.20em;
         margin: 0 auto;
         margin-top: 50px;
-        width: 80%;
+        padding-right: 3%;
+        padding-left: 3%;
     }
     .cards {
         margin-top: 80px;
@@ -31,6 +37,7 @@
 
 @media only screen and (max-width: 576px) { 
     .main-card {
+        margin-top: 30%;
         .cards {
             margin-top: 5px;
         }
