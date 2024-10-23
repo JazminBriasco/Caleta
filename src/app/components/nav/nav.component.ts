@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { finalize, from, of, switchMap } from 'rxjs';
 
@@ -8,10 +8,27 @@ import { finalize, from, of, switchMap } from 'rxjs';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+  public useResponsiveNav = false;
+  public isNavOpen = false;
+  
+  @HostListener('window:resize') 
+    checkSize() {
+      console.log(window.innerWidth);
+      this.useResponsiveNav = window.innerWidth <= 900;
+    }
 
-  constructor(private router: Router) { }
+  @HostListener('document:click', ['$event'])
+    onClick(event: MouseEvent) {
+      if (!this.elementRef.nativeElement.contains(event.target)) {
+        this.isNavOpen = false;
+      }
+    }
 
-  ngOnInit(): void {  }
+  constructor(private router: Router, private elementRef: ElementRef) { }
+
+  ngOnInit(): void { 
+    this.checkSize();
+   }
 
   scrollToSection(sectionId: string): void {
     this.redirectSection(sectionId)
@@ -32,5 +49,9 @@ export class NavComponent implements OnInit {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
     }
+  }
+
+  openNav(){
+    this.isNavOpen = !this.isNavOpen
   }
 }

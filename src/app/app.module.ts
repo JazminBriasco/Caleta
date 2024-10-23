@@ -15,6 +15,7 @@ import { ContactAsComponent } from './components/contact-as/contact-as.component
 import { GaleryComponent } from './components/galery/galery.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { RightsComponent } from './components/rights/rights.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     FooterComponent,
     ToastComponent,
     ContactAsComponent,
-    GaleryComponent
+    GaleryComponent,
+    RightsComponent
   ],
   imports: [
     BrowserModule,

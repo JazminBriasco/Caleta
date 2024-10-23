@@ -1,16 +1,40 @@
-<div class="nav-display">
-  <ul class="nav nav-pills">
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/" title="Lo de Jaz cabañas - Reserva en La Caleta">INICIO</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/galeria" title="Lo de Jaz cabañas - Galeria de imagenes en La Caleta">GALERIA DE FOTOS</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link"  routerLink="/"  title="Lo de Jaz cabañas - Reserva en La Caleta" (click)="scrollToSection('contacto')">CONTACTO</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/"  title="Lo de Jaz cabañas - Reserva en La Caleta" (click)="scrollToSection('mapa')" >MAPA</a>
-    </li>
-  </ul>
+<div *ngIf="!useResponsiveNav; else responsiveNav">
+  <div class="nav-display">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" title="Lo de Jaz cabañas - Reserva en La Caleta">INICIO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/galeria" title="Lo de Jaz cabañas - Galeria de imagenes en La Caleta">GALERIA DE FOTOS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  routerLink="/"  title="Lo de Jaz cabañas - Reserva en La Caleta" (click)="scrollToSection('contacto')">CONTACTO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/"  title="Lo de Jaz cabañas - Reserva en La Caleta" (click)="scrollToSection('mapa')" >MAPA</a>
+      </li>
+    </ul>
+  </div>
 </div>
+
+<ng-template #responsiveNav>
+  <a class="open-nav" >
+    <img src="../../../assets/1904665-bar-lines-list-menu-nav-navigation-options_122515.png" alt="Abrir menú" title="Menú" (click)="openNav()">
+  </a>
+  <div *ngIf="isNavOpen" class="nav-display">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" title="Lo de Jaz cabañas - Reserva en La Caleta">INICIO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/galeria" title="Lo de Jaz cabañas - Galeria de imagenes en La Caleta">GALERIA DE FOTOS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  routerLink="/"  title="Lo de Jaz cabañas - Reserva en La Caleta" (click)="scrollToSection('contacto')">CONTACTO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/"  title="Lo de Jaz cabañas - Reserva en La Caleta" (click)="scrollToSection('mapa')" >MAPA</a>
+      </li>
+    </ul>
+  </div>
+</ng-template>

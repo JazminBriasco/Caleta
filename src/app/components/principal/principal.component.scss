@@ -25,15 +25,8 @@
     }
 }
 
-.rights {
-    width: 100%;
-    height: 20px;
-    text-align: center;
-    background-color: #898989;
-    font-family: $fontSizeMainText;
-    font-weight: bolder;
-    a {
-        color: black;
-        text-decoration: underline;
+@media only screen and (max-width: 900px) {
+    .bkg-main {
+     //   background-image: url('../../../assets/Landscapes/landscape-09.jpeg');
     }
-}
+  }

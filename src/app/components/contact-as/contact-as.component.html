@@ -5,11 +5,11 @@
             <div class="col-sm-4 col1">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item contactLabel"><strong>¡Contactanos!</strong></li>
-                    <li class="list-group-item"><img src="../../../assets/whatsapp-icon.png" height="30" alt="Contactanos por WhatsApp" title="WhatsApp"/> WhatsApp: 
-                        <a aria-label="Chat on WhatsApp" href="https://wa.me/+5492235916030" target="_blank" title="WhatsApp">¡Click aquí!</a >
+                    <li class="list-group-item"><img src="../../../assets/whatsapp-icon.png" height="30" alt="Contactanos por WhatsApp" title="WhatsApp"/> {{!useResponsiveContact ? 'WhatsApp:' : ''  }}
+                        <a aria-label="Chat on WhatsApp" href="https://wa.me/+5492235916030" target="_blank" title="WhatsApp">{{!useResponsiveContact ? '¡Click aquí!' : 'WhatsApp' }}</a >
                         </li>
-                    <li class="list-group-item"><img src="../../../assets/facebook-icon.png" height="30" alt="Contactanos por Facebook" title="Facebook"/> Facebook: <a href="https://web.facebook.com/cabanaslodejaz?locale=es_LA" target="_blank"title="Facebook">/cabanaslodejaz</a></li>
-                    <li class="list-group-item"><img src="../../../assets/gmail-icon.png" height="30" alt="Contactanos por Gmail" title="Gmail"/> Gmail: <a href="mailto:lodejazcaleta@gmail.com" target="_blank" title="Gmail">{{mailTo}}</a></li>
+                    <li class="list-group-item"><img src="../../../assets/facebook-icon.png" height="30" alt="Contactanos por Facebook" title="Facebook"/>{{!useResponsiveContact ? 'Facebook': ''}} <a href="https://web.facebook.com/cabanaslodejaz?locale=es_LA" target="_blank"title="Facebook">{{!useResponsiveContact ? '/cabanaslodejaz' : 'Facebook'}}</a></li>
+                    <li class="list-group-item"><img src="../../../assets/gmail-icon.png" height="30" alt="Contactanos por Gmail" title="Gmail"/>{{!useResponsiveContact ? 'Gmail:' : ''}} <a href="mailto:lodejazcaleta@gmail.com" target="_blank" title="Gmail">{{!useResponsiveContact ? mailTo : 'Gmail'}}</a></li>
                     </ul>
             </div>
             <div class="col-sm-6 col2">

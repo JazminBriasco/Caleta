@@ -1,8 +1,22 @@
-<div class="individual-card-reverse">
-    <div class="card-section-1-reverse" style="background-image: url({{bkgUrl}});">
-    </div>
-    <div class="card-section-2-reverse">
-        <h3 class="p-cards-reverse">{{legend}}</h3>
-        <hr>
+<div *ngIf="!useResponsiveCard; else responsiveReverseCard">
+
+    <div class="individual-card-reverse">
+        <div class="card-section-1-reverse" style="background-image: url({{bkgUrl}});">
+        </div>
+        <div class="card-section-2-reverse">
+            <h3 class="p-cards-reverse">{{legend}}</h3>
+            <hr>
+        </div>
     </div>
 </div>
+
+<ng-template #responsiveReverseCard>
+    <div class="container-card">
+    <div class="card">
+        <img class="card-img-top" src={{bkgUrl}} alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">{{legend}}</p>
+        </div>
+      </div>
+    </div>
+</ng-template>
