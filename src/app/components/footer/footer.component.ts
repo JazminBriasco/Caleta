@@ -12,7 +12,7 @@ import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 export class FooterComponent implements OnInit {
   contactForm :FormGroup;
   isFormValid: boolean = false;
-  bkgUrl = BackgroundEnum.lands10;
+  bkgUrl = '"../../../assets/Landscapes/landscape-11.jpeg"';
   isLoading = false;
   
   userId = 'w5g9eITuxDIo-tMgL'; 

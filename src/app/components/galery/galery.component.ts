@@ -65,17 +65,17 @@ export class GaleryComponent implements OnInit {
   slidesCabin3 = [
     {
       title: '',
-      image: BackgroundEnum.cabin301,
+      image: BackgroundEnum.cabin309,
       description: '',
     },
     {
       title: '',
-      image: BackgroundEnum.cabin302,
+      image: BackgroundEnum.cabin310,
       description: '',
     },
     {
       title: '',
-      image: BackgroundEnum.cabin303,
+      image: BackgroundEnum.cabin311,
       description: '',
     },
   ];
